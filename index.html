@@ -302,18 +302,33 @@
       .cities-track { animation: none; }
     }
 
-    /* ══════════════ HONEST BAND ══════════════ */
-    .honest { background: var(--signal-soft); padding: 68px 0; }
-    .honest-inner { max-width: 760px; }
+   /* ══════════════ HONEST BAND ══════════════ */
+    .honest { background: var(--signal-soft); padding: 84px 0; }
+    .honest-card {
+      max-width: 720px; margin: 0 auto; text-align: center;
+      background: var(--paper); border-radius: var(--radius-l);
+      box-shadow: var(--shadow-lg); padding: 56px 60px;
+    }
+    .honest-card .badge { margin: 0 auto; }
+    .honest-mark {
+      display: block; font-family: Georgia, "Times New Roman", serif;
+      font-size: 64px; line-height: 1; font-weight: 700;
+      color: var(--signal); opacity: .3; margin-bottom: -10px;
+    }
     .honest-quote {
-      margin-top: 18px; color: var(--ink);
-      font-size: clamp(23px, 3vw, 33px); line-height: 1.3; letter-spacing: -0.015em; font-weight: 800;
+      margin-top: 16px; color: var(--ink);
+      font-size: clamp(24px, 3.2vw, 36px); line-height: 1.32; letter-spacing: -0.015em; font-weight: 800;
     }
     .honest-sig {
-      margin-top: 22px; display: flex; align-items: center; gap: 10px;
-      color: var(--signal-dark); font-size: 13.5px; font-weight: 700;
+      margin-top: 26px; display: flex; align-items: center; justify-content: center; gap: 10px;
+      color: var(--text); font-size: 13.5px; font-weight: 700;
     }
-    .honest-sig::before { content: "—"; }
+    .honest-avatar {
+      width: 30px; height: 30px; border-radius: 999px;
+      background: var(--signal-soft); color: var(--signal-dark);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 13px; flex-shrink: 0;
+    }
 
     /* ══════════════ SECTIONS COMMUNES ══════════════ */
     .section { padding: 88px 0; background: var(--paper); }
@@ -455,6 +470,8 @@
       .stat-card { padding: 18px 16px; }
       .stat-card strong { font-size: 21px; }
       .honest { padding: 48px 0; }
+      .honest-card { padding: 36px 24px; }
+      .honest-mark { font-size: 46px; }
       .section { padding: 56px 0; }
       .mech-step { padding: 22px; }
       .field-row { grid-template-columns: 1fr; }
@@ -540,10 +557,16 @@
 
     <!-- HONEST BAND -->
     <section class="honest">
-      <div class="container honest-inner reveal">
-        <div class="badge">Notre vision</div>
-        <p class="honest-quote">Faire de l'alternance la porte d'entrée la plus juste vers le monde du travail en France — que chaque étudiant y trouve vraiment sa place, dès le premier jour.</p>
-        <p class="honest-sig">Titouan, fondateur de Solution Alternance</p>
+      <div class="container">
+        <div class="honest-card reveal">
+          <span class="honest-mark" aria-hidden="true">&ldquo;</span>
+          <div class="badge">Notre vision</div>
+          <p class="honest-quote">Faire de l'alternance la porte d'entrée la plus juste vers le monde du travail en France — que chaque étudiant y trouve vraiment sa place, dès le premier jour.</p>
+          <div class="honest-sig">
+            <span class="honest-avatar" aria-hidden="true">T</span>
+            <span>Titouan, fondateur de Solution Alternance</span>
+          </div>
+        </div>
       </div>
     </section>
 
